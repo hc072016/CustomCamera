@@ -14,6 +14,8 @@
 		DE7F29CB227D41800047ACD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7F29C9227D41800047ACD4 /* LaunchScreen.storyboard */; };
 		DE7F29D6227D41800047ACD4 /* CustomCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F29D5227D41800047ACD4 /* CustomCameraTests.swift */; };
 		DE7F29E1227D41800047ACD4 /* CustomCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F29E0227D41800047ACD4 /* CustomCameraUITests.swift */; };
+		DE7F29EF227D41A50047ACD4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F29EE227D41A50047ACD4 /* CameraViewController.swift */; };
+		DE7F29F1227D41BB0047ACD4 /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F29F0227D41BB0047ACD4 /* CameraOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		DE7F29DC227D41800047ACD4 /* CustomCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7F29E0227D41800047ACD4 /* CustomCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraUITests.swift; sourceTree = "<group>"; };
 		DE7F29E2227D41800047ACD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE7F29EE227D41A50047ACD4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		DE7F29F0227D41BB0047ACD4 /* CameraOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				DE7F29C0227D417F0047ACD4 /* AppDelegate.swift */,
 				DE7F29C2227D417F0047ACD4 /* ViewController.swift */,
+				DE7F29EE227D41A50047ACD4 /* CameraViewController.swift */,
+				DE7F29F0227D41BB0047ACD4 /* CameraOverlayView.swift */,
 				DE7F29C4227D417F0047ACD4 /* Main.storyboard */,
 				DE7F29C7227D41800047ACD4 /* Assets.xcassets */,
 				DE7F29C9227D41800047ACD4 /* LaunchScreen.storyboard */,
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE7F29F1227D41BB0047ACD4 /* CameraOverlayView.swift in Sources */,
 				DE7F29C3227D417F0047ACD4 /* ViewController.swift in Sources */,
 				DE7F29C1227D417F0047ACD4 /* AppDelegate.swift in Sources */,
+				DE7F29EF227D41A50047ACD4 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

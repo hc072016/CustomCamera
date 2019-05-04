@@ -115,6 +115,26 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                     UIGraphicsEndImageContext()
                     if let flattenedImage = flattenedImage {
                         if let compressedJPEGImageData = flattenedImage.jpegData(compressionQuality:CameraViewController.compressionQuality), let compressedJPEGImage = UIImage(data: compressedJPEGImageData) {
+                            // could also use Photos framework to save pictures with metadata
+                            /*
+                            PHPhotoLibrary.shared().performChanges({
+                                let request = PHAssetChangeRequest.creationRequestForAsset(from: compressedJPEGImage)
+                                request.creationDate = Date()
+                                // use CLLocationManager to get the geographic coordinate
+                                request.location = CLLocation(latitude: 43.6498718, longitude: -79.620308)
+                            }, completionHandler: { (success, error) in
+                                DispatchQueue.main.async {
+                                    if (!success) {
+                                        let alertController = UIAlertController(title: "Failed to Add Metadata", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                                        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                                        alertController.addAction(okAction)
+                                        self.imagePickerController!.present(alertController, animated: true, completion: nil)
+                                    } else {
+                                        UIImageWriteToSavedPhotosAlbum(compressedJPEGImage, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
+                                    }
+                                }
+                            })
+                            */
                             DispatchQueue.main.async {
                                 UIImageWriteToSavedPhotosAlbum(compressedJPEGImage, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
                             }
